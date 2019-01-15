@@ -1552,6 +1552,76 @@ sans-serif;
                 }
             }
         }
+        .work_menu {
+            .block {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .item {
+                    &:nth-child(1) {
+                        a {
+                            height: 530px;
+                        }
+                    }
+                    .sub_item {
+                        & + .sub_item {
+                            margin-top: 10px;
+                        }
+                        a {
+                            height: 260px;
+                        }
+                    }
+                    a {
+                        display: block;
+                        width: 625px;
+                        background: @clr_grey_border;
+                        position: relative;
+                        .name {
+                            font: 500 28px/32px @font;
+                            color: #fff;
+                            position: absolute;
+                            left: 50px;
+                            top: 50px;
+                        }
+                        .num {
+                            font: 500 18px/22px @font;
+                            color: #fff;
+                            position: absolute;
+                            left: 50px;
+                            bottom: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .work_menu2 {
+            margin-top: 120px;
+            .block {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .item {
+                    width: ~"calc(33.33% - 10px)";
+                    &:nth-child(-n+2) {
+                        width: ~"calc(50% - 7.5px)";
+                        margin-bottom: 15px;
+                    }
+                    a {
+                        display: block;
+                        height: 210px;
+                        background: @clr_grey_border;
+                        position: relative;
+                        .name {
+                            font: 500 22px/35px @font;
+                            color: #fff;
+                            position: absolute;
+                            left: 30px;
+                            bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
     }
     footer {
         border-top: 2px solid @clr_grey_border2;
