@@ -1558,6 +1558,7 @@ sans-serif;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 .item {
+                    width: ~"calc(100%/2 - 10px/2)";
                     &:nth-child(1) {
                         a {
                             height: 530px;
@@ -1573,7 +1574,6 @@ sans-serif;
                     }
                     a {
                         display: block;
-                        width: 625px;
                         background: @clr_grey_border;
                         position: relative;
                         .name {
@@ -1601,9 +1601,9 @@ sans-serif;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 .item {
-                    width: ~"calc(33.33% - 10px)";
+                    width: ~"calc(100%/3 - 30px/3)";
                     &:nth-child(-n+2) {
-                        width: ~"calc(50% - 7.5px)";
+                        width: ~"calc(100%/2 - 15px/2)";
                         margin-bottom: 15px;
                     }
                     a {
@@ -1617,6 +1617,46 @@ sans-serif;
                             position: absolute;
                             left: 30px;
                             bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .partners_list {
+            .block {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .item {
+                    width: ~"calc(100%/4 - 30px/4)";
+                    margin-top: 10px;
+                    &:nth-child(-n+4) {
+                        margin-top: 0px;
+                    }
+                    a {
+                        display: block;
+                        border: 1px solid @clr_grey_border2;
+                        text-decoration: none;
+                        .img {
+                            height: 170px;
+                            border-bottom: 1px solid @clr_grey_border2;
+                        }
+                        .name {
+                            height: 120px;
+                            font: 500 14px/18px @font;
+                            color: @clr_grey;
+                            padding: 20px;
+                            position: relative;
+                            &:before {
+                                content: '';
+                                display: block;
+                                width: 19px;
+                                height: 11px;
+                                background: url(../img/all/arrow.png) no-repeat;
+                                position: absolute;
+                                left: 20px;
+                                bottom: 20px;
+                            }
                         }
                     }
                 }
