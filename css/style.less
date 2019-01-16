@@ -31,6 +31,93 @@ sans-serif;
     }
 }
 
+body {
+    padding-left: 70px;
+}
+
+.side_panel {
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: @clr_white;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    .menu {
+        height: 70px;
+        background: url(../img/all/side_menu.png) no-repeat 50% 50% @clr_green;
+        cursor: pointer;
+    }
+    .back {
+        button {
+            width: 100%;
+            height: 70px;
+            border: none;
+            border-bottom: 1px solid @clr_grey_border2;
+            font: 700 12px/15px @font;
+            color: @clr_green;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            padding-top: 20px;
+            outline: none;
+            cursor: pointer;
+            &:before {
+                content: '';
+                display: block;
+                width: 19px;
+                height: 11px;
+                background: url(../img/all/arrow_back.png) no-repeat 50% 50%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 20px;
+            }
+        }
+    }
+    .urls {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        border-top: 1px solid @clr_grey_border2;
+        border-bottom: 1px solid @clr_grey_border2;
+        .item {
+            border-top: 1px solid @clr_grey_border2;
+            &:nth-child(1) {
+                border-top: none;
+            }
+            &.calc {
+                a {
+                    background: url(../img/all/icon_calc.png) no-repeat 50% 10px;
+                }
+            }
+            &.price {
+                a {
+                    background: url(../img/all/icon_price.png) no-repeat 50% 10px;
+                }
+            }
+            &.address {
+                a {
+                    background: url(../img/all/icon_address.png) no-repeat 50% 10px;
+                }
+            }
+            a {
+                display: block;
+                height: 70px;
+                font: 700 8px/12px @font;
+                color: @clr_grey;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 50px;
+            }
+        }
+    }
+}
+
 .wrapper {
     overflow: hidden;
     min-width: 1260px;
